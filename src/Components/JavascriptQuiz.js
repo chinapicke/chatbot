@@ -8,6 +8,8 @@ const JavascriptQuiz = (props) => {
     const incrementIndex=()=>{
         setQuizIndex((prevIndex)=>prevIndex += 1)
     }
+
+
     
     const currentQuestion = props.questions[quizIndex]
 
@@ -18,7 +20,7 @@ const JavascriptQuiz = (props) => {
     }
   return (
     <div>
-        <QuizCard question={currentQuestion.question} answer={currentQuestion.answer} incrementIndex={incrementIndex}/>
+        <QuizCard question={currentQuestion.question} answer={currentQuestion.answer} answerOptions={currentQuestion.answerOptions} incrementIndex={incrementIndex}  />
     </div>
   )
 }
